@@ -4,5 +4,6 @@ engine = create_engine(#factory: fabrica de motores p/ se conectar com sqlalchem
     'sqlite://'
 )
 
-print(engine)
-print(engine.dialect)
+con =engine.connect()
+
+con.close()
