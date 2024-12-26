@@ -16,13 +16,13 @@ with engine.connect() as connection:
             print(row)
     with connection.begin():
         # Executa a consulta para offset 10
-        sql = text(query.format(of=10))
+        sql = text(query.format(of=1))
         result2 = connection.execute(sql)
         for row in result2:
             print(row)
     with connection.begin():
         # Executa a consulta para offset 20
-        sql = text(query.format(of=20))
+        sql = text(query.format(of=2))
         result3 = connection.execute(sql)
         for row in result3:
             print(row)

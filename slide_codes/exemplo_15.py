@@ -28,7 +28,7 @@ engine = create_engine('postgresql+psycopg2://postgres:lazevedo@localhost:5432/e
 from sqlalchemy.orm import Session
 
 with Session(engine) as s:
-    result = s.scalar(select(Comment).where(Comment.id == 1))
+    result = s.scalar(select(Comment).where(Comment.id == 3))
     s.delete(result)
     s.commit()
 
